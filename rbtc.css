@@ -1,0 +1,47 @@
+  .ctbutton {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      background: url('https://bitcoinplanet.uk/wp-content/uploads/2023/05/cryptocurrency.webp') no-repeat center center;
+      background-size: cover;
+      text-indent: -9999px;
+      overflow: hidden;
+      position: relative;
+      perspective: 800px;
+      transform-style: preserve-3d;
+      animation: rotation 6s linear infinite;
+    }
+
+    .ctbutton::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.5) inset;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .ctbutton:hover::before {
+      opacity: 1;
+    }
+
+    .ctbutton img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: translateZ(30px);
+    }
+
+    @keyframes rotation {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
